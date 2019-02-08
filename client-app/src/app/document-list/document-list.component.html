@@ -1,0 +1,6 @@
+<div class="document-filter">
+  <label class="input-wrapper">
+    <input [formControl]="filter" type="text" placeholder="Фильтр документов">
+  </label>
+</div>
+<app-document *ngFor="let document of filteredDocuments" [document]="document" (delete)="deleteDocument($event)"></app-document>

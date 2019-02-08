@@ -1,0 +1,79 @@
+.content {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-top: 100px;
+}
+
+.header {
+  width: 100vw;
+}
+
+.content {
+  width: 100vw;
+}
+
+.content, .header {
+  max-width: 1024px;
+}
+
+.header .username, .header .logout-wrapper {
+  background-color: #ECF8FD;
+  box-shadow: 0 0 15px #A1C6EA;
+  padding: 10px 15px;
+}
+
+.header .username {
+  float: left;
+}
+
+.header .logout-wrapper {
+  float: right;
+  border: none;
+}
+
+.header .logout-wrapper {
+  float: right;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.header .logout-wrapper:hover {
+  background-color: #69A4E0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-wrapper {
+  margin-bottom: 30px;
+}
+
+.tab-wrapper .tab-list {
+  box-shadow: 0 0 15px #A1C6EA;
+  background-color: #ECF8FD;
+}
+
+.tab-wrapper .tab-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.tab-link {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.tab-link:hover, .tab-link.active {
+  background-color: #A1C6EA;
+}
+
+.tab-link:focus, .tab-link:active {
+  outline: none;
+}
+
+/*.tab-container */

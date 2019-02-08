@@ -1,0 +1,38 @@
+<div class="document">
+  <div (click)="toggleClicked()" class="title">Название: {{document.title}}</div>
+  <div class="full-data" *ngIf="clicked">
+    <div class="details-grid">
+      <div class="description-col">
+        <div class="description" *ngIf="document.description">
+          Описание: {{document.description}}
+        </div>
+        <div class="need-list" *ngIf="owner">
+          Создатель: {{ owner }}
+        </div>
+        <div class="need-list" *ngIf="signs">
+          Подписало: {{ signs }} человек
+        </div>
+
+        <div class="not-signed-list" *ngIf="notSign">
+          Не подписали: {{ notSign }}
+        </div>
+
+        <div class="accept-date" *ngIf="acceptDate">
+          Дата принятия: {{ acceptDate | date:'yyyy/MM/dd' }}
+        </div>
+
+        <div class="end-date" *ngIf="validToDate">
+          Дата действия: {{ validToDate | date:'yyyy/MM/dd' }}
+        </div>
+      </div>
+      <div class="buttons-col">
+        <button (click)="downloadFile()">Скачать</button>
+        <label *ngIf="isOwner" class="file-wrapper">Загрузить<input type="file" #file (change)="uploadFile(file.files[0])"/></label>
+        <a #download></a>
+        <button *ngIf="canArchive" (click)="archiveDocument()">В архив</button>
+        <button *ngIf="canSign" (click)="signDocument()">Подписать</button>
+        <button *ngIf="isOwner" (click)="deleteDocument()">Удалить</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+.login-form-wrapper {
+  background-color: #ECF8FD;
+  padding: 15px;
+  box-shadow: 0 0 15px #A1C6EA;
+}
+
+.form-header {
+  font-size: 1.4em;
+}
+
+.form-control-wrapper, .form-header {
+  padding: 15px 10px 0 10px;
+}
+
+.form-control-wrapper input {
+  padding: 5px;
+  border: 3px solid #ECF8FD;
+}
+
+.form-control-wrapper button {
+  padding: 5px 10px;
+  background-color: #CAECF9;
+  border: none;
+  cursor: pointer;
+}
+.form-control-wrapper button[disabled] {
+  background-color: rgba(100%, 100%, 100%, .8);
+  color: rgba(0, 0, 0, .4);
+}
+
+.form-control-wrapper button:hover {
+  background-color: #A1C6EA;
+}
+
+.form-control-wrapper :focus {
+  outline: none;
+}
+
+.form-control-wrapper input:focus {
+  border: 3px solid #A1C6EA;
+}
+
+.form-control-wrapper input, .form-control-wrapper button{
+  font-size: 1.2em;
+}

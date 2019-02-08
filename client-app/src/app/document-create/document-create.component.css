@@ -1,0 +1,156 @@
+form {
+  margin-top: 10px;
+  box-shadow: 0 2px 1px rgba(170, 170, 170, 0.25), 0 0 15px #A1C6EA;
+  background-color: #ECF8FD;
+  display: block;
+}
+
+.column {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 15px;
+  width: 50%;
+}
+
+.input-wrapper {
+  margin-bottom: 15px;
+}
+
+select {
+  height: 84px;
+}
+
+input, textarea, select {
+  padding: 5px;
+  border: 3px solid #ECF8FD;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+button, .file-wrapper {
+  padding: 5px 10px;
+  background-color: #CAECF9;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+button {
+  width: 128px;
+}
+
+button[disabled] {
+  background-color: rgba(100%, 100%, 100%, .8);
+  color: rgba(0, 0, 0, .4);
+}
+
+button:hover, .file-wrapper:hover {
+  background-color: #A1C6EA;
+}
+
+input:focus, button:focus, textarea:focus, select:focus, .file-wrapper:hover {
+  outline: none;
+}
+
+input:focus, textarea:focus, option:focus {
+  border: 3px solid #A1C6EA;
+}
+
+input, textarea, button, .file-wrapper{
+  font-size: 1.2em;
+}
+
+textarea {
+  resize: none;
+}
+
+option {
+  -webkit-appearance: listitem;
+}
+
+option:hover {
+  background-color: #A1C6EA;
+}
+
+.submit-text, .loading-spinner {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.loading-spinner {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 11px;
+}
+
+.loading-spinner span {
+  position: absolute;
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.loading-spinner span:nth-child(1) {
+  left: 6px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.loading-spinner span:nth-child(2) {
+  left: 6px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.loading-spinner span:nth-child(3) {
+  left: 26px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.loading-spinner span:nth-child(4) {
+  left: 45px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(19px, 0);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .column {
+    width: 100%;
+  }
+}

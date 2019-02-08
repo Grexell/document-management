@@ -1,0 +1,19 @@
+<div class="content">
+  <div class="header">
+    <div class="username">Пользователь, {{ username }}</div>
+    <button class="logout-wrapper" (click)="logout()">Выйти</button>
+  </div>
+
+  <div class="tab-wrapper">
+    <div class="tab-list">
+      <div routerLink="./me" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="tab-link">Мои документы</div>
+      <div routerLink="./active" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="tab-link">Активные</div>
+      <div routerLink="./sign" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="tab-link">Подписи</div>
+      <div routerLink="./archive" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="tab-link">Архив</div>
+      <div routerLink="./create" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="tab-link">Создать</div>
+    </div>
+    <div class="tab-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

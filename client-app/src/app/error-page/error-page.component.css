@@ -1,0 +1,14 @@
+.error-wrapper {
+  background-color: #ECF8FD;
+  padding: 15px 35px 25px;
+  box-shadow: 0 0 15px #A1C6EA;
+}
+
+a {
+  text-decoration: none;
+  color: #235E99;
+}
+
+a:hover {
+  text-decoration: underline;
+}

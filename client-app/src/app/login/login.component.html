@@ -1,0 +1,8 @@
+<div class="login-form-wrapper">
+  <div class="form-header">Login</div>
+  <form [formGroup]="loginForm" (ngSubmit)="authenticate()">
+    <div class="form-control-wrapper"><input formControlName="login" type="text" placeholder="Имя пользователя"/></div>
+    <div class="form-control-wrapper"><input formControlName="password" type="password" placeholder="Пароль"/></div>
+    <div class="form-control-wrapper"><button>Войти</button></div>
+  </form>
+</div>

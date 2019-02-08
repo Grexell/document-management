@@ -1,0 +1,21 @@
+<form [formGroup]="createForm" (ngSubmit)="submit()"><div class="column"><div class="input-wrapper"><input formControlName="title" type="text" placeholder="Название"></div>
+    <div class="input-wrapper"><textarea rows="8" formControlName="description" placeholder="Описание"></textarea>
+    </div>
+    <div class="input-wrapper"><input formControlName="acceptDate" type="date" placeholder="Дата принятия"></div>
+    <div class="input-wrapper"><input formControlName="validTo" type="date" placeholder="Дата действия"></div>
+  </div><div class="column">
+    <div class="input-wrapper"><input formControlName="userFilter" type="text" placeholder="Фильтр подписывающих пользователей"></div>
+    <div class="input-wrapper"><select multiple formControlName="users">
+      <option *ngFor="let user of filteredUsers" [ngValue]="user">{{user.name}}</option>
+    </select></div>
+    <div class="input-wrapper"><input formControlName="accessFilter" type="text" placeholder="Фильтр доступа пользователей"></div>
+    <div class="input-wrapper"><select multiple formControlName="accesses" name="accesses">
+      <option *ngFor="let access of filteredAccesses" [ngValue]="access">{{access.department}} {{access.post}}</option>
+    </select></div>
+    <label class="file-wrapper">Загрузить файл<input type="file" #file (change)="setFile(file.files[0])"/></label>
+    <button><span *ngIf="loading"
+                  class="loading-spinner"><span></span><span></span><span></span><span></span></span><span
+      *ngIf="!loading" class="submit-text">Создать</span></button>
+  </div>
+
+</form>

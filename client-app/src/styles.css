@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-family: Helvetica, sans-serif;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #BBD1EA;
+  color: #1E1E1E;
+  font-family: Helvetica, sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+  justify-content: center;
+  align-items: center;
+}

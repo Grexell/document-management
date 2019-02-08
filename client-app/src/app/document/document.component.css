@@ -1,0 +1,78 @@
+.document {
+  margin-top: 10px;
+  box-shadow: 0 2px 1px rgba(170, 170, 170, 0.25);
+  background-color: #ECF8FD;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+.title {
+  cursor: pointer;
+}
+
+.full-data {
+  box-shadow: inset 0px 17px 10px -16px #69A4E0;
+}
+
+.document div {
+  padding: 15px;
+}
+
+.full-data {
+  background-color: #A1C6EA;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-areas: "d b";
+}
+
+.details-grid .description-col {
+  grid-area: d;
+}
+
+.details-grid .buttons-col {
+  grid-area: b;
+}
+
+.description-col :not(:last-child) {
+  border-bottom: 1px solid ;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+button, .file-wrapper {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 10px;
+  background-color: #CAECF9;
+  border: none;
+  font-weight: normal;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 1px rgba(170, 170, 170, 0.25);
+}
+
+button[disabled] {
+  background-color: rgba(100%, 100%, 100%, .8);
+  color: rgba(0, 0, 0, .4);
+}
+
+button:hover, .file-wrapper:hover {
+  background-color: #69A4E0;
+}
+
+input:focus, button:focus, .file-wrapper:hover {
+  outline: none;
+}
+
+input, textarea, button, .file-wrapper{
+  font-size: 1.2em;
+}
